@@ -1,5 +1,4 @@
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
@@ -57,38 +56,36 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar
-          position="static"
-          className="bgColor1 py-2"
-          sx={{ height: "60px" }}
-        >
-          <Toolbar variant="dense">
-            <div className="container mx-auto">
-              <div className="flex items-center justify-between mb-1">
-                <div className="logo ml-3">
-                  <img src={logo} alt="quran" className="w-11 md:w-14" />
-                </div>
-                <div className="w-60 flex justify-center">
-                  <img
-                    src={bismillah}
-                    alt="bismillah"
-                    className="bismillahImg w-32 md:w-auto"
-                  />
-                </div>
-                <div className="right">
-                  <MaterialUISwitch
-                    checked={darkMode}
-                    onChange={() => toggleDarkMode()}
-                    color="default"
-                    className="scale-[.75] md:scale-[1] transition-all"
-                  />
-                </div>
+      <AppBar
+        position="static"
+        className="bgColor1 py-2"
+        sx={{ height: "60px" }}
+      >
+        <Toolbar variant="dense">
+          <div className="container mx-auto">
+            <div className="flex items-center justify-between mb-1">
+              <div className="logo ml-3">
+                <img src={logo} alt="quran" className="w-11 md:w-14" />
+              </div>
+              <div className="w-60 flex justify-center">
+                <img
+                  src={bismillah}
+                  alt="bismillah"
+                  className="bismillahImg w-32 md:w-auto"
+                />
+              </div>
+              <div className="right">
+                <MaterialUISwitch
+                  checked={darkMode}
+                  onChange={() => toggleDarkMode()}
+                  color="default"
+                  className="scale-[.75] md:scale-[1] transition-all"
+                />
               </div>
             </div>
-          </Toolbar>
-        </AppBar>
-      </Box>
+          </div>
+        </Toolbar>
+      </AppBar>
     </>
   );
 };

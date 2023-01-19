@@ -93,23 +93,19 @@ const HolyQuran = () => {
   }, [currentSurahNumber]);
 
   useEffect(() => {
-    setTimeout(() => {
-      import(`./../data/allSurah/${currentSurahNumber}.json`).then((res) => {
-        setSurah({
-          loading: false,
-          fullSurah: res.default,
-        });
+    import(`./../data/allSurah/${currentSurahNumber}.json`).then((res) => {
+      setSurah({
+        loading: false,
+        fullSurah: res.default,
       });
-    }, 1000);
+    });
   }, [currentSurahNumber]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setSurahList({
-        loading: false,
-        surah: allSurahList,
-      });
-    }, 1000);
+    setSurahList({
+      loading: false,
+      surah: allSurahList,
+    });
   }, []);
 
   useEffect(() => {
