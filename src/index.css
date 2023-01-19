@@ -172,11 +172,11 @@
 
 @media (max-width: 768px) {
   .calcHeight {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 220px);
   }
 
   .mainSurah {
-    height: calc(100vh - 253px);
+    height: calc(100vh - 310px);
   }
 }
 
