@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRef } from "react";
 import Ayah from "./Ayah";
 import RightSideBottomSkeleton from "./RightSideBottomSkeleton";
@@ -9,11 +9,11 @@ const RightSideBottom = ({ surah, loading, saveToReadLater, readLater }) => {
   const ayahRef = useRef(null);
   const [currentAyahPlaying, setCurrentAyahPlaying] = useState(null);
 
-  useEffect(() => {
-    if (ayahRef && currentAyahPlaying) {
-      ayahRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [currentAyahPlaying]);
+  // useEffect(() => {
+  //   if (ayahRef && currentAyahPlaying) {
+  //     ayahRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [currentAyahPlaying]);
 
   return (
     <>
