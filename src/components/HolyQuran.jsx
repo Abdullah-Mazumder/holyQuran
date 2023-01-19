@@ -102,9 +102,11 @@ const HolyQuran = () => {
   }, [currentSurahNumber]);
 
   useEffect(() => {
-    setSurahList({
-      loading: false,
-      surah: allSurahList,
+    import("./../data/allSurah.js").then((res) => {
+      setSurahList({
+        loading: false,
+        surah: allSurahList,
+      });
     });
   }, []);
 

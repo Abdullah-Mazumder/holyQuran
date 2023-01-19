@@ -55,11 +55,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   }));
 
   return (
-    <>
+    <div className="h-[60px]">
       <AppBar
         position="static"
         className="bgColor1 py-2"
-        sx={{ height: "60px" }}
+        sx={{ height: "100%" }}
       >
         <Toolbar variant="dense">
           <div className="container mx-auto">
@@ -86,7 +86,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </div>
         </Toolbar>
       </AppBar>
-    </>
+    </div>
   );
 };
 
