@@ -151,11 +151,11 @@
 }
 
 .calcHeight {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 105px);
 }
 
 .mainSurah {
-  height: calc(100vh - 196px);
+  height: calc(100vh - 201px);
 }
 
 .mainSurah2 {
