@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#holyQuran {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@font-face {
+  font-family: "hafezi";
+  src: url("./fonts/noorehuda.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "bn";
+  src: url("./fonts/banglaquran.otf") format("truetype");
+}
+
+.arabicTxt {
+  font-family: "hafezi" !important;
+}
+
+.bnTxt {
+  font-family: "bn";
+}
+
+.light {
+  background-color: white;
+}
+
+.light .txtColor {
+  color: black;
+}
+
+.light .bgColor1 {
+  background-color: #e8ecf0;
+}
+
+.light .bgColor2 {
+  background-color: white;
+}
+
+.light .bgColor3 {
+  background-color: #6b6b6b;
+  color: white;
+}
+
+.light .hoverBg:hover {
+  background-color: #e0e3e7;
+}
+
+.light .active {
+  background-color: #e0e3e7;
+}
+
+.light .bismillahImg {
+  filter: brightness(0%) contrast(100%) saturate(0%);
+}
+
+.light .divider {
+  border-bottom: 0.5px solid #b9bdc2;
+}
+
+.light .skBg {
+  background-color: #dae0e5;
+}
+
+.light .bgWarning {
+  background-color: #fff4e5;
+  color: rgb(102, 60, 0);
+}
+
+.light .waveBg {
+  background-color: black;
+}
+
+.dark .bgSuccess {
+  background-color: rgb(237, 247, 237);
+  color: rgb(30, 70, 32);
+}
+
+.dark {
+  background-color: #001e3c;
+  background-image: url("./media/quran-icon-png-8826.png");
+  background-repeat: repeat;
+  background-size: 50px;
+}
+
+.dark .txtColor {
+  color: white;
+}
+
+.dark .bgColor1 {
+  background-color: #0a1929;
+  opacity: 0.98;
+}
+
+.dark .bgColor2 {
+  background-color: #001e3c;
+}
+
+.dark .bgColor3 {
+  background-color: #001e3c;
+  color: white;
+}
+
+.dark .hoverBg:hover {
+  background-color: #002e5c;
+}
+
+.dark .active {
+  background-color: #002e5c;
+}
+
+.dark .bismillahImg {
+  filter: brightness(500%) contrast(500%) saturate(0%);
+}
+
+.dark .divider {
+  border-bottom: 0.5px solid rgb(51 65 85);
+}
+
+.dark .skBg {
+  background-color: #03284c;
+}
+
+.dark .bgWarning {
+  background-color: #191207;
+  color: rgb(255, 226, 183);
+}
+
+.dark .bgSuccess {
+  background-color: #0c130d;
+  color: rgb(204, 232, 205);
+}
+
+.dark .waveBg {
+  background-color: white;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: lightgrey;
+  border-radius: 10%;
+}
+
+.calcHeight {
+  height: calc(100vh - 100px);
+}
+
+.mainSurah {
+  height: calc(100vh - 196px);
+}
+
+.mainSurah2 {
+  height: calc(100vh - 197px);
+}
+
+.leftSide {
+  flex: 1;
+}
+
+.rightSide {
+  flex: 3.1;
+}
+
+@media (max-width: 768px) {
+  .calcHeight {
+    height: calc(100vh - 160px);
+  }
+
+  .mainSurah {
+    height: calc(100vh - 253px);
+  }
+}
+
+.wave-pillar {
+  animation: wave 1s ease-in-out infinite;
+}
+
+.wave-pillar:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.wave-pillar:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.wave-pillar:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+.wave-pillar:nth-of-type(4) {
+  animation-delay: 0.6s;
+}
+
+.wave-pillar:nth-of-type(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(2.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
