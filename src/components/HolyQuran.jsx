@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import LeftSide from "./LeftSide";
 import Navbar from "./Navbar";
 import RightSide from "./RightSide";
@@ -81,7 +82,13 @@ const HolyQuran = () => {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
-  }, [loading, ayahNumber, surah.fullSurah, currentSurahNumber]);
+  }, [
+    loading,
+    ayahNumber,
+    surah.fullSurah,
+    currentSurahNumber,
+    ayahContainerRef.current,
+  ]);
 
   useEffect(() => {
     if (menuRef) {
@@ -90,7 +97,7 @@ const HolyQuran = () => {
       );
       if (child) child.scrollIntoView({ behavior: "smooth" });
     }
-  }, [currentSurahNumber, surahList.surah]);
+  }, [currentSurahNumber, surahList.surah, menuRef.current]);
 
   useEffect(() => {
     setSurah({
