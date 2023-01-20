@@ -96,11 +96,6 @@ const Ayah = memo(
             component="p"
             className="txtColor text-right text-xl arabic flex items-center justify-between py-3 divider"
           >
-            <span
-              className={`text-xs p-1 font-thin border-slate-400 border-2 rounded-full flex items-center justify-center`}
-            >
-              {id}
-            </span>
             <span className="arabicTxt text-4xl lg:text-5xl mt-1 !leading-[50px] md:!leading-[60px]">
               <RenderHtml htmlString={colorText} />
             </span>
