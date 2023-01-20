@@ -176,25 +176,27 @@ const HolyQuran = () => {
   return (
     <div id="holyQuran">
       {NaveBarComponent}
-      <div className="bgColor1 toggle md:hidden mt-1 w-full flex justify-center items-center">
-        <Tooltip
-          TransitionComponent={Zoom}
-          title="Menu"
-          arrow={true}
-          placement="top"
-          classes={{
-            tooltip: "bgColor2",
-            tooltipArrow: "bgColor2",
-          }}
-        >
-          <IconButton
-            aria-label="delete"
-            size="large"
-            onClick={() => setToggleSidebar(!toggleSidebar)}
+      <div className="absolute top-0 left-20 mt-[90px] toggle md:hidden w-full flex items-center z-50">
+        <div className="bgColor2 rounded-full">
+          <Tooltip
+            TransitionComponent={Zoom}
+            title="Menu"
+            arrow={true}
+            placement="top"
+            classes={{
+              tooltip: "bgColor2",
+              tooltipArrow: "bgColor2",
+            }}
           >
-            <MenuBookTwoToneIcon fontSize="inherit" className="txtColor" />
-          </IconButton>
-        </Tooltip>
+            <IconButton
+              aria-label="delete"
+              size="large"
+              onClick={() => setToggleSidebar(!toggleSidebar)}
+            >
+              <MenuBookTwoToneIcon fontSize="inherit" className="txtColor" />
+            </IconButton>
+          </Tooltip>
+        </div>
       </div>
       <div className="md:container mx-auto">
         <div className="mainContainer md:flex relative md:gap-2">
