@@ -12,6 +12,10 @@ import { useRef, memo } from "react";
 import Alert from "@mui/material/Alert";
 import useAudioPlayer from "../hooks/useAudioPlay";
 
+const RenderHtml = ({ htmlString }) => {
+  return <span dangerouslySetInnerHTML={{ __html: htmlString }} />;
+};
+
 const Ayah = memo(
   ({
     ayah,
@@ -24,7 +28,7 @@ const Ayah = memo(
   }) => {
     const {
       id,
-      arabic_text,
+      colorText,
       english_text,
       bangl_text,
       page,
@@ -98,7 +102,7 @@ const Ayah = memo(
               {id}
             </span>
             <span className="arabicTxt text-4xl lg:text-5xl mt-1 !leading-[50px] md:!leading-[60px]">
-              {arabic_text}
+              <RenderHtml htmlString={colorText} />
             </span>
           </Box>
           <Box
