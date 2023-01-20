@@ -91,7 +91,7 @@ const HolyQuran = () => {
   ]);
 
   useEffect(() => {
-    if (menuRef) {
+    if (menuRef.current) {
       const child = menuRef.current.querySelector(
         `#shortSurah-${currentSurahNumber}`
       );
