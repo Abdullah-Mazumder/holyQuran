@@ -11,7 +11,6 @@ const LeftSide = ({
   setCurrentSurahNumber,
   setToggleSidebar,
   readLater,
-  currentSurahRef,
 }) => {
   const { loading, surah } = surahList;
   return (
@@ -45,7 +44,6 @@ const LeftSide = ({
                 setCurrentSurahNumber={setCurrentSurahNumber}
                 setToggleSidebar={setToggleSidebar}
                 readLater={readLater}
-                currentSurahRef={currentSurahRef}
               />
             ))}
           </>

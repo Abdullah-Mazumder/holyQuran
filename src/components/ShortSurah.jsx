@@ -9,7 +9,6 @@ const ShortSurah = ({
   setCurrentSurahNumber,
   setToggleSidebar,
   readLater,
-  currentSurahRef,
 }) => {
   const {
     id,
@@ -31,7 +30,7 @@ const ShortSurah = ({
         className={`bgColor2 hoverBg p-2 cursor-pointer rounded-md w-full mr-1 ${
           currentSurahNumber === id ? "active" : ""
         }`}
-        ref={id === currentSurahNumber ? currentSurahRef : null}
+        id={`shortSurah-${id}`}
       >
         <div className="flex items-center gap-3">
           <div className="logo w-12 md:w-16">
