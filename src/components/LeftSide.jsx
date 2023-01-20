@@ -16,7 +16,7 @@ const LeftSide = ({
   const { loading, surah } = surahList;
   return (
     <div
-      className="bgColor1 leftSide md:transition-none p-4 m-1 rounded-lg fixed md:static translate-x-[-130%] md:translate-x-0 md:min-w-[330px] z-50"
+      className="bgColor1 leftSide md:transition-none p-4 m-1 rounded-lg fixed md:static translate-x-[-130%] md:translate-x-0 md:min-w-[330px] z-50 overflow-hidden"
       ref={menuRef}
     >
       <Box

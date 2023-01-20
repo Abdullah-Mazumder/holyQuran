@@ -23,7 +23,7 @@ const RightSide = ({ singleSurah, saveToReadLater, readLater }) => {
     [surah, loading, readLater]
   );
   return (
-    <div className="rightSide my-1 w-full">
+    <div className="rightSide my-1 w-full overflow-hidden">
       {loading ? <RightSideTopSkeleton /> : RightSideTopComponent}
       {RightSideBottomComponent}
     </div>
