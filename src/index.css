@@ -180,7 +180,7 @@ body {
 
 @media (max-width: 768px) {
   .calcHeight {
-    height: calc(100vh - 155px);
+    height: calc(100vh - 175px);
   }
 
   .mainSurah {

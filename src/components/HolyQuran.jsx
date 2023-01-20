@@ -12,6 +12,7 @@ import { Box } from "@mui/system";
 
 const HolyQuran = () => {
   const menuRef = useRef(null);
+  const navbarRef = useRef(null);
   const ayahContainerRef = useRef(null);
   const [toggleSidebar, setToggleSidebar] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
@@ -72,6 +73,12 @@ const HolyQuran = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSurahNumber]);
+
+  useEffect(() => {
+    if (!loading) {
+      navbarRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [currentSurahNumber, loading, surah, surahList]);
 
   useEffect(() => {
     if (ayahContainerRef.current) {
@@ -168,7 +175,13 @@ const HolyQuran = () => {
   }, [readLater]);
 
   const NaveBarComponent = useMemo(
-    () => <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />,
+    () => (
+      <Navbar
+        navbarRef={navbarRef}
+        darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}
+      />
+    ),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [darkMode]
   );

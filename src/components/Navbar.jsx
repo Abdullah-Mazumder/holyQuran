@@ -7,7 +7,7 @@ import Switch from "@mui/material/Switch";
 import logo from "./../media/quranLogo.png";
 import bismillah from "../media/bismillah.png";
 
-const Navbar = ({ darkMode, toggleDarkMode }) => {
+const Navbar = ({ darkMode, toggleDarkMode, navbarRef }) => {
   const MaterialUISwitch = styled(Switch)(() => ({
     width: 62,
     height: 34,
@@ -57,7 +57,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }} className="mt-[50px] md:mt-0">
+      <div ref={navbarRef} className="w-full mb-[50px]"></div>
+      <Box sx={{ flexGrow: 1 }} className="">
         <AppBar
           position="static"
           className="bgColor1 py-2"
