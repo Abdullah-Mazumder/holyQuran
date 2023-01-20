@@ -32,7 +32,7 @@ const LeftSide = ({
           <CloseIcon />
         </Fab>
       </Box>
-      <div className="calcHeight overflow-y-auto overflow-x-hidden w-[280px] md:w-auto">
+      <div className="calcHeight overflow-y-auto overflow-x-hidden w-[280px] md:w-auto space-y-2">
         {loading ? (
           <LeftSideSkeleton />
         ) : (
