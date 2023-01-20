@@ -56,6 +56,14 @@ const HolyQuran = () => {
   };
 
   useEffect(() => {
+    const deviceWidth = window.innerWidth;
+    const deviceHeight = window.innerHeight;
+
+    document.body.style.width = deviceWidth;
+    document.body.style.height = deviceHeight;
+  }, []);
+
+  useEffect(() => {
     setTimeout(() => {
       if (!localStorage.getItem("isShowedQuranModal")) {
         setModalOpen(true);
