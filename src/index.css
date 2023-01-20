@@ -5,8 +5,10 @@
 body {
   width: 100vw;
   height: 100vh !important;
-  position: absolute !important;
   overflow: hidden !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
 }
 
 #holyQuran,
@@ -15,6 +17,8 @@ body {
   height: 100% !important;
   overflow: hidden !important;
   position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
 }
 
 @font-face {
