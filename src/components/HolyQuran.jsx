@@ -182,8 +182,8 @@ const HolyQuran = () => {
   return (
     <div id="holyQuran">
       {NaveBarComponent}
-      <div className="absolute top-0 left-20 mt-[40px] toggle md:hidden w-full flex items-center z-50">
-        <div className="bgColor2 rounded-full">
+      <div className="absolute top-0 left-20 mt-[90px] toggle md:hidden w-full flex items-center z-50">
+        <div className="bgColor2 rounded-full w-[40px] h-[40px] flex items-center justify-center">
           <Tooltip
             TransitionComponent={Zoom}
             title="Menu"
@@ -196,7 +196,7 @@ const HolyQuran = () => {
           >
             <IconButton
               aria-label="delete"
-              size="large"
+              size="small"
               onClick={() => setToggleSidebar(!toggleSidebar)}
             >
               <MenuBookTwoToneIcon fontSize="inherit" className="txtColor" />
