@@ -176,7 +176,7 @@ const HolyQuran = () => {
   return (
     <div id="holyQuran">
       {NaveBarComponent}
-      <div className="absolute top-0 left-20 mt-[90px] toggle md:hidden w-full flex items-center z-50">
+      <div className="absolute top-0 left-20 mt-[40px] toggle md:hidden w-full flex items-center z-50">
         <div className="bgColor2 rounded-full">
           <Tooltip
             TransitionComponent={Zoom}
