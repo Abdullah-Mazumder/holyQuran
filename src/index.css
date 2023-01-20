@@ -163,10 +163,6 @@ body {
   height: calc(100vh - 201px);
 }
 
-.mainSurah2 {
-  height: calc(100vh - 197px);
-}
-
 .leftSide {
   flex: 1;
 }

@@ -28,7 +28,7 @@ const ShortSurah = ({
           setCurrentSurahNumber(singleSurah.id);
           setToggleSidebar(false);
         }}
-        className={`bgColor2 hoverBg p-2 my-2 cursor-pointer rounded-md w-full mr-1 ${
+        className={`bgColor2 hoverBg p-2 cursor-pointer rounded-md w-full mr-1 ${
           currentSurahNumber === id ? "active" : ""
         }`}
         ref={id === currentSurahNumber ? currentSurahRef : null}
