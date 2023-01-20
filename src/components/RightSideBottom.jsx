@@ -3,7 +3,13 @@ import { useRef } from "react";
 import Ayah from "./Ayah";
 import RightSideBottomSkeleton from "./RightSideBottomSkeleton";
 
-const RightSideBottom = ({ surah, loading, saveToReadLater, readLater }) => {
+const RightSideBottom = ({
+  surah,
+  loading,
+  saveToReadLater,
+  readLater,
+  ayahContainerRef,
+}) => {
   // const verses = surah?.verses;
   // const totalAyah = verses?.length;
   const ayahRef = useRef(null);
@@ -17,7 +23,7 @@ const RightSideBottom = ({ surah, loading, saveToReadLater, readLater }) => {
 
   return (
     <>
-      <div className="bgColor1 p-4 pr-2 rounded-lg mt-2">
+      <div className="bgColor1 p-4 pr-2 rounded-lg mt-2" ref={ayahContainerRef}>
         <div className={`mainSurah overflow-y-auto`}>
           {loading ? (
             <RightSideBottomSkeleton />

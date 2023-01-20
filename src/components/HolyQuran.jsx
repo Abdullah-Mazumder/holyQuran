@@ -11,6 +11,7 @@ import { Box } from "@mui/system";
 
 const HolyQuran = () => {
   const menuRef = useRef(null);
+  const ayahContainerRef = useRef(null);
   const [toggleSidebar, setToggleSidebar] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
   const [currentSurahNumber, setCurrentSurahNumber] = useState(1);
@@ -72,11 +73,15 @@ const HolyQuran = () => {
   }, [currentSurahNumber]);
 
   useEffect(() => {
-    const element = document.querySelector(`#ayat${ayahNumber}`);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (ayahContainerRef.current) {
+      const element = ayahContainerRef.current.querySelector(
+        `#ayat${ayahNumber}`
+      );
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
-  }, [loading, ayahNumber, surah.fullSurah]);
+  }, [loading, ayahNumber, surah.fullSurah, currentSurahNumber]);
 
   useEffect(() => {
     if (menuRef) {
@@ -206,6 +211,7 @@ const HolyQuran = () => {
             singleSurah={surah}
             saveToReadLater={saveToReadLater}
             readLater={readLater}
+            ayahContainerRef={ayahContainerRef}
           />
         </div>
       </div>

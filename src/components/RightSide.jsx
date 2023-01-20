@@ -3,7 +3,12 @@ import RightSideBottom from "./RightSideBottom";
 import RightSideTop from "./RightSideTop";
 import RightSideTopSkeleton from "./RightSideTopSkeleton";
 
-const RightSide = ({ singleSurah, saveToReadLater, readLater }) => {
+const RightSide = ({
+  singleSurah,
+  saveToReadLater,
+  readLater,
+  ayahContainerRef,
+}) => {
   const { loading, fullSurah } = singleSurah;
   const { surahDetails, surah } = fullSurah;
   const RightSideTopComponent = useMemo(
@@ -17,6 +22,7 @@ const RightSide = ({ singleSurah, saveToReadLater, readLater }) => {
         loading={loading}
         saveToReadLater={saveToReadLater}
         readLater={readLater}
+        ayahContainerRef={ayahContainerRef}
       />
     ),
     // eslint-disable-next-line react-hooks/exhaustive-deps

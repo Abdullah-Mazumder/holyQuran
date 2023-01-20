@@ -13,7 +13,12 @@ import Alert from "@mui/material/Alert";
 import useAudioPlayer from "../hooks/useAudioPlay";
 
 const RenderHtml = ({ htmlString }) => {
-  return <span dangerouslySetInnerHTML={{ __html: htmlString }} />;
+  return (
+    <span
+      className="text-right"
+      dangerouslySetInnerHTML={{ __html: htmlString }}
+    />
+  );
 };
 
 const Ayah = memo(
@@ -94,9 +99,9 @@ const Ayah = memo(
 
           <Box
             component="p"
-            className="txtColor text-right text-xl arabic flex items-center justify-between py-3 divider"
+            className="txtColor text-xl arabic flex items-center justify-between py-3 divider"
           >
-            <span className="arabicTxt text-4xl lg:text-5xl mt-1 !leading-[50px] md:!leading-[60px]">
+            <span className="arabicTxt text-right w-full text-4xl lg:text-5xl mt-1 !leading-[50px] md:!leading-[60px]">
               <RenderHtml htmlString={colorText} />
             </span>
           </Box>
