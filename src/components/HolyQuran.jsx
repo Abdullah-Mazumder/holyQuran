@@ -76,35 +76,35 @@ const HolyQuran = () => {
 
   useEffect(() => {
     if (!loading) {
-      navbarRef.current.scrollIntoView({ behavior: "smooth" });
+      // navbarRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [currentSurahNumber, loading, surah, surahList]);
 
-  useEffect(() => {
-    if (ayahContainerRef.current) {
-      const element = ayahContainerRef.current.querySelector(
-        `#ayat${ayahNumber}`
-      );
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [
-    loading,
-    ayahNumber,
-    surah.fullSurah,
-    currentSurahNumber,
-    ayahContainerRef.current,
-  ]);
+  // useEffect(() => {
+  //   if (ayahContainerRef.current) {
+  //     const element = ayahContainerRef.current.querySelector(
+  //       `#ayat${ayahNumber}`
+  //     );
+  //     if (element) {
+  //       element.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   }
+  // }, [
+  //   loading,
+  //   ayahNumber,
+  //   surah.fullSurah,
+  //   currentSurahNumber,
+  //   ayahContainerRef.current,
+  // ]);
 
-  useEffect(() => {
-    if (menuRef.current) {
-      const child = menuRef.current.querySelector(
-        `#shortSurah-${currentSurahNumber}`
-      );
-      if (child) child.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [currentSurahNumber, surahList.surah, menuRef.current]);
+  // useEffect(() => {
+  //   if (menuRef.current) {
+  //     const child = menuRef.current.querySelector(
+  //       `#shortSurah-${currentSurahNumber}`
+  //     );
+  //     if (child) child.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [currentSurahNumber, surahList.surah, menuRef.current]);
 
   useEffect(() => {
     setSurah({

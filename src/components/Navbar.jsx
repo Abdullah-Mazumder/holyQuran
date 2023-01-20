@@ -57,7 +57,6 @@ const Navbar = ({ darkMode, toggleDarkMode, navbarRef }) => {
 
   return (
     <>
-      <div ref={navbarRef} className="w-full mb-[50px]"></div>
       <Box sx={{ flexGrow: 1 }} className="">
         <AppBar
           position="static"
